@@ -1,0 +1,73 @@
+spring:
+  application:
+    name: accounting-service
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/erp_dev?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-init-sql: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        "format_sql": true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        jdbc:
+          "batch_size": 20
+          "fetch_size": 50
+        "order_inserts": true
+        "order_updates": true
+
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+      indent-output: true
+    deserialization:
+      fail-on-unknown-properties: false
+
+  mvc:
+    log-request-details: false
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    "com.erp.accounting": DEBUG
+    "org.springframework.web": DEBUG
+    "org.hibernate.SQL": DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/accounting-service.log
+    max-size: 10MB
+    max-history: 10
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
+  endpoint:
+    health:
+      show-details: when-authorized
+
+app:
+  name: ERP Accounting Service
+  version: 1.0.0
+  description: Module de comptabilitÃ© pour ERP
+

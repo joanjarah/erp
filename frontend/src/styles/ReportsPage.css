@@ -1,0 +1,89 @@
+.reports-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.summary-card {
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-card strong {
+  font-size: 24px;
+}
+
+.summary-card.accent {
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.2), rgba(255, 255, 255, 0.92));
+}
+
+.summary-card.dark {
+  background: linear-gradient(120deg, rgba(var(--accent-3-rgb), 0.2), rgba(255, 255, 255, 0.92));
+}
+
+.report-table {
+  padding: 24px;
+}
+
+.account-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-main span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.debit {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.credit {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.net {
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

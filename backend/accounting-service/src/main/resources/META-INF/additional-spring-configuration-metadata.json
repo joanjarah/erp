@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "app.name",
+      "type": "java.lang.String",
+      "description": "Nom lisible du service."
+    },
+    {
+      "name": "app.version",
+      "type": "java.lang.String",
+      "description": "Version fonctionnelle du service."
+    },
+    {
+      "name": "app.description",
+      "type": "java.lang.String",
+      "description": "Description courte du service."
+    }
+  ]
+}

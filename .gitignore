@@ -1,0 +1,74 @@
+# Compiled classes
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.rar
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+.m2
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# React
+build/
+dist/
+.cache
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Database
+*.sql.bak
+backup.sql
+*.db
+
+# Runtime
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Misc
+.DS_Store
+Thumbs.db
+.env
+.env.local
+.env.*local

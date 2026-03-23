@@ -1,0 +1,36 @@
+.account-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-section {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: none;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.accounts-table th,
+.accounts-table td {
+  font-size: 14px;
+}
+
+.account-number {
+  font-weight: 700;
+}

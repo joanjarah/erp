@@ -1,0 +1,11 @@
+.accounts-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

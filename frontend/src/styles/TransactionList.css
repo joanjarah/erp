@@ -1,0 +1,24 @@
+.transaction-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transactions-table td,
+.transactions-table th {
+  font-size: 13px;
+}
+
+.type {
+  font-weight: 700;
+}
+
+.debit {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.credit {
+  color: var(--accent);
+  font-weight: 700;
+}
